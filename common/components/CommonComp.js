@@ -24,19 +24,26 @@ export class Hr extends Component {
 }
 
 export class SimpleCard extends Component {
-  render() {
+  renderTitle() {
     return (
-      <View style={styles.cardBase}>
-        <View style={styles.cardBody}>
-          <Text style={styles.cardTitleFont}>
-            {strings.currentResume}
-          </Text>
-          <Text style={styles.cardBodyFont}>
-            {strings.noCurrentResume}
-          </Text>
-        </View>
+      <Text style={styles.cardTitle}>
+        {this.props.title}
+      </Text>
+    );
+  }
+  renderBody() {
+    return (
+      <View style={styles.cardBody}>
+        {this.props.cardBody}
       </View>
     );
   }
-
+  render() {
+    return (
+      <View style={styles.cardBase}>
+        {this.renderTitle()}
+        {this.renderBody()}
+      </View>
+    );
+  }
 }

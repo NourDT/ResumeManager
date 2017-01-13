@@ -19,16 +19,14 @@ export default StyleSheet.create({
   },
   cardBase: {
     backgroundColor: 'white',
+    padding: padding.mediumPadding
   },
-  cardTitleFont: {
+  cardTitle: {
     fontSize: 20,
     fontWeight: 'bold'
   },
   cardBody: {
-    padding: padding.mediumPadding
-  },
-  cardBodyFont: {
-
+    
   },
   hrLine: {
     flex: 1,
