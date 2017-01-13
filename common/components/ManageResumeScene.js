@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-import CurrentResumeCard from './CurrentResumeComp/CurrentResume';
+import CurrentResumeCard from './CurrentResumeComp/CurrentResumeCard';
 import NewResumeCard from './CurrentResumeComp/NewResumeCard';
 import styles from './styles/allStyles';
 import { Hr } from './CommonComp';

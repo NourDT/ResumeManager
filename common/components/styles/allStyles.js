@@ -36,4 +36,3 @@ export default StyleSheet.create({
     marginBottom: padding.mediumPadding
   }
 });
-

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { View, Text, NavigationExperimental } from 'react-native';
 import ManageResumeScene from './ManageResumeScene';
 import ViewResumeScene from './ViewResumeScene';
+import ComingSoonScene from './ComingSoonScene';
 
 const {
   CardStack: NavigationCardStack,
@@ -39,6 +40,10 @@ class NavigationCardStackBase extends Component {
         return <ManageResumeScene {...this.props}/>; // only pass push and pop??
       case 'ViewResumeScene':
         return <ViewResumeScene {...this.props}/>;
+      case 'PasteResumeScene':
+        return <ViewResumeScene {...this.props}/>;
+      case 'ComingSoonScene':
+        return <ComingSoonScene {...this.props}/>;
     }
   }
   _renderHeader = (sceneProps) => {
