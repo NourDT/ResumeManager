@@ -4,10 +4,15 @@ import { View, Text, StyleSheet } from 'react-native';
 import styles from './styles/allStyles';
 
 export class BlueButton extends Component {
-  // could be moved/renamed and reused as a more genric blue button
+  disabledButStyle = () => {
+    return this.props.isEnabled ? {} : {backgroundColor: 'gray'};
+  }
   render() {
     return (
-      <Text style={styles.textButtonBlue} onPress={this.props.onPressAction}>
+      <Text 
+        style={[styles.textButtonBlue, this.disabledButStyle()]}
+        onPress={this.props.onPressAction}
+      >
         {this.props.buttonText}
       </Text>
     );
