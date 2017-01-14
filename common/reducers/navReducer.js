@@ -6,11 +6,14 @@ const {
   StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
-function navReducer(state, action) {
+const navReducer = (state, action) => {
   if (!state) {
     return {
       index: 0,
-      routes: [{ key : 'ManageResumeScene', title: strings.manageResumeTitle }]
+      routes: [
+        // { key : 'ManageResumeScene', title: strings.manageResumeTitle },
+        { key : 'PasteResumeScene', title: strings.pasteResume }
+      ]
     }
   }
   switch (action.type) {
