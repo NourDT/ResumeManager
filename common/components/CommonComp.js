@@ -7,11 +7,14 @@ export class BlueButton extends Component {
   disabledButStyle = () => {
     return this.props.isEnabled ? {} : {backgroundColor: 'gray'};
   }
+  disabledButOnPress = () => {
+    return this.props.isEnabled ? this.props.onPressAction : () => {};
+  }
   render() {
     return (
       <Text 
         style={[styles.textButtonBlue, this.disabledButStyle()]}
-        onPress={this.props.onPressAction}
+        onPress={this.disabledButOnPress()}
       >
         {this.props.buttonText}
       </Text>
