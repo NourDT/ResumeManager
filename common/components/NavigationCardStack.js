@@ -3,11 +3,12 @@ import { View, Text, NavigationExperimental } from 'react-native';
 import ManageResumeScene from './ManageResumeScene';
 import ViewResumeScene from './ViewResumeScene';
 import ComingSoonScene from './ComingSoonScene';
+import PasteResumeScene from './PasteResumeScene';
 
 const {
   CardStack: NavigationCardStack,
   Header: NavigationHeader,
-} = NavigationExperimental
+} = NavigationExperimental;
 
 class Header extends Component {
   render() {
@@ -24,7 +25,7 @@ class Header extends Component {
     this.props.pop()
   }
 
-  _renderTitleComponent= (props) => {
+  _renderTitleComponent = (props) => {
     return (
       <NavigationHeader.Title>
         {props.scene.route.title}
@@ -41,7 +42,7 @@ class NavigationCardStackBase extends Component {
       case 'ViewResumeScene':
         return <ViewResumeScene {...this.props}/>;
       case 'PasteResumeScene':
-        return <ViewResumeScene {...this.props}/>;
+        return <PasteResumeScene {...this.props}/>;
       case 'ComingSoonScene':
         return <ComingSoonScene {...this.props}/>;
     }
@@ -55,6 +56,7 @@ class NavigationCardStackBase extends Component {
     );
   }
   render() {
+    console.log('NavigationCardStackBase render ' + JSON.stringify(this.props));
     return (
       <NavigationCardStack
         renderHeader={this._renderHeader}
