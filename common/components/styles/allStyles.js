@@ -1,3 +1,7 @@
+/**
+* Styles for various components
+* Could be organized further
+*/
 import { StyleSheet } from 'react-native';
 
 const padding = {

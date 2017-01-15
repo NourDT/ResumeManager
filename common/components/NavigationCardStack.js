@@ -28,6 +28,9 @@ class Header extends Component {
     this.props.pop()
   }
 
+  /**
+  * Only one scene has the Save button on the right
+  */  
   _renderRightComponent = (props) => {
     switch(props.scene.route.key) {
       case 'PasteResumeScene':

@@ -6,6 +6,9 @@ import strings from '../../res/strings';
 import { BlueButton } from '../CommonComp';
 import { push } from '../../actions/navActions';
 
+/**
+* Enabled when currResume is not empty. And opens view resume scene.
+*/
 class ViewResumeButton extends Component {
   isNotEmptyCurrResume() {
     return this.props.currResume && this.props.currResume.length > 0;

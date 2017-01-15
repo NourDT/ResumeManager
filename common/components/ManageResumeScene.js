@@ -6,6 +6,9 @@ import NewResumeCard from './ManageResumeSceneComp/NewResumeCard';
 import styles from './styles/allStyles';
 import { Hr } from './CommonComp';
 
+/**
+* Has CurrentResumeCard and NewResumeCard seperated by Hr
+*/
 class ManageResumeScene extends Component {
   render() {
     return (

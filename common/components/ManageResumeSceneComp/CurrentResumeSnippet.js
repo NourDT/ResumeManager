@@ -7,6 +7,10 @@ import strings from '../../res/strings';
 import { getResumeEndPt } from '../../res/settings';
 import { onCurrResumeChanged } from '../../actions/otherActions';
 
+/**
+* Snippet of message in current resume card on manage resume scene.
+* Displays default message when no resume.
+*/
 class CurrentResumeSnippet extends Component {
   getCurrentResume() {
     this.getCurrentResumeFromServer();

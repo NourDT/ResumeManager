@@ -1,8 +1,15 @@
+/**
+* Multiple common stateless components
+*/
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 import styles from './styles/allStyles';
 
+/**
+* Text view which takes props isEnabled, buttonText and onPressAction
+* See ViewResumeButton for example
+*/
 export class BlueButton extends Component {
   disabledButStyle = () => {
     return this.props.isEnabled ? {} : {backgroundColor: 'gray'};
@@ -22,15 +29,20 @@ export class BlueButton extends Component {
   }
 }
 
+/**
+* Simple horizontal line or could use other npm packages like react-native-hr
+*/
 export class Hr extends Component {
-  // simple horizontal line or could use other npm packages like react-native-hr
-  render() {
+    render() {
     return (
       <View style={styles.hrLine} />
     );
   }
 }
 
+/**
+* Card component, takes props title and cardBody
+*/
 export class SimpleCard extends Component {
   renderTitle = () => {
     return (

@@ -13,7 +13,9 @@ export default class ComingSoonScene extends Component {
   }
   render() {
     return (
-      <SimpleCard title={strings.comingSoon} cardBody={this.renderBody()}/>
+      <View style={styles.sceneBase}>
+        <SimpleCard title={strings.comingSoon} cardBody={this.renderBody()}/>
+      </View>
     );
   }
 }

@@ -6,6 +6,9 @@ import strings from '../res/strings';
 import styles from './styles/allStyles';
 import { SimpleCard } from './CommonComp';
 
+/**
+* View Resume is one simple card which gets currResume as body from store.
+*/
 class ViewResumeScene extends Component {
   renderBody() {
     return(
@@ -14,7 +17,9 @@ class ViewResumeScene extends Component {
   }
   render() {
     return (
-      <SimpleCard title={strings.currentResume} cardBody={this.renderBody()}/>
+      <View style={styles.sceneBase}>
+        <SimpleCard title={strings.currentResume} cardBody={this.renderBody()}/>
+      </View>
     );
   }
 }

@@ -7,6 +7,9 @@ import styles from './styles/allStyles';
 import strings from '../res/strings';
 import { onPasteResumeTextChanged } from '../actions/otherActions';
 
+/** 
+* Text input for pasting resume. When text changes store is updated and here Save button listens.
+*/
 class PasteResumeScene extends Component {
   renderResumeTextInput(props) {
     this.props.pasteResumeChanged('');

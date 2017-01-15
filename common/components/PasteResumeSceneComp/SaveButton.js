@@ -8,6 +8,11 @@ import strings from '../../res/strings';
 import { saveResumeEndPt } from '../../res/settings';
 import { onCurrResumeChanged } from '../../actions/otherActions';
 
+/**
+* Save button is
+* gray/disabled when pasteResumeText is empty,
+* blue/enabled otherwise
+*/
 class SaveButton extends Component {
   postResume(text) {
     console.log('posting...');
