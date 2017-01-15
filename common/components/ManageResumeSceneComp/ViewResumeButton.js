@@ -12,7 +12,6 @@ class ViewResumeButton extends Component {
   }
 
   render() {
-    console.log('ViewResumeButton render');
     return(
       <BlueButton 
         onPressAction={ () => this.props.push({ key: 'ViewResumeScene', title: 'Current Resume' }) }

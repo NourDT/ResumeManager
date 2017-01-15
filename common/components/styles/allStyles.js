@@ -17,6 +17,12 @@ export default StyleSheet.create({
     textAlign: 'center',
     textAlignVertical: 'center'
   },
+  saveButton: {
+    alignItems: 'center',
+    fontSize: 20,
+    margin: 14,
+    color: '#21A9DC',
+  },
   cardBase: {
     backgroundColor: 'white',
     padding: padding.mediumPadding

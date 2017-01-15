@@ -20,7 +20,6 @@ class CurrentResumeCard extends Component {
   }
 
   renderBody() {
-    console.log('CurrentResumeCard render');
     return (
       <View>
         {this.renderCurrentResumeSnippet()}

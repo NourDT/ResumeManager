@@ -34,7 +34,6 @@ class CurrentResumeSnippet extends Component {
   }
 
   render() {
-    console.log('CurrentResumeSnippet render');
     if (this.isEmptyCurrResume()) {
       this.getCurrentResume();
     }

@@ -15,7 +15,7 @@ let strings = new LocalizedStrings({
     pasteResumePlaceholder: "Paste in your resume here..."
   },
   it:{
-    currentResume: "Current Resume + Pizza :D",
+    currentResume: "Current Resume + Pizza",
     viewResume: "View Resume + Pizza",
     manageResumeTitle: "Manage Resume Pizza",
     noCurrentResume: "No resume uploaded! Go get pizza.",

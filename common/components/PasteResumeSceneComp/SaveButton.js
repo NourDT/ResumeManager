@@ -31,15 +31,26 @@ class SaveButton extends Component {
       });
   }
 
+  isNotTextEmpty() {
+    return this.props.pasteResumeText.text && this.props.pasteResumeText.text.length > 0;
+  }
+
+  disabledButStyle() {
+    return this.isNotTextEmpty() ? {} : {color: 'gray'};
+  }
+  disabledButOnPress() {
+    return this.isNotTextEmpty() ? () => this.postResume(this.props.pasteResumeText.text) : () => {};
+  }
+
   render() {
     console.log('SaveButton render');
-    const isNotTextEmpty = this.props.pasteResumeText.text && this.props.pasteResumeText.text.length > 0;
     return(
-      <BlueButton 
-        onPressAction={ () => this.postResume(this.props.pasteResumeText.text) }
-        buttonText={strings.savePasteResume}
-        isEnabled={isNotTextEmpty}
-      />
+      <Text 
+        style={[styles.saveButton, this.disabledButStyle()]}
+        onPress={this.disabledButOnPress()}
+      >
+        {strings.savePasteResume}
+      </Text>
     );
   }
 }

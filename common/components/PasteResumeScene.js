@@ -22,17 +22,9 @@ class PasteResumeScene extends Component {
     );
   }
 
-  renderSaveButton() {
-    return(
-      <SaveButton/>
-    );
-  }
-
   render() {
-    console.log('PasteResumeScene render');
     return (
       <View style={styles.sceneBase}>
-        {this.renderSaveButton()}
         {this.renderResumeTextInput()}
       </View>
     );
