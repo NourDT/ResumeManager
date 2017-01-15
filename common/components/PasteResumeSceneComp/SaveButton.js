@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 import styles from '../styles/allStyles';
 import { BlueButton } from '../CommonComp';
 import strings from '../../res/strings';
+import { saveResumeEndPt } from '../../res/settings';
 import { onCurrResumeChanged } from '../../actions/otherActions';
 
 class SaveButton extends Component {
   postResume(text) {
     console.log('posting...');
-    return fetch('http://192.168.1.73:8000/currentresume/', {
+    return fetch(saveResumeEndPt, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -38,6 +39,7 @@ class SaveButton extends Component {
   disabledButStyle() {
     return this.isNotTextEmpty() ? {} : {color: 'gray'};
   }
+
   disabledButOnPress() {
     return this.isNotTextEmpty() ? () => this.postResume(this.props.pasteResumeText.text) : () => {};
   }

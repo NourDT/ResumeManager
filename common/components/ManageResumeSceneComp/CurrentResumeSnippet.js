@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import styles from '../styles/allStyles';
 import strings from '../../res/strings';
+import { getResumeEndPt } from '../../res/settings';
 import { onCurrResumeChanged } from '../../actions/otherActions';
 
 class CurrentResumeSnippet extends Component {
@@ -16,7 +17,7 @@ class CurrentResumeSnippet extends Component {
   * Successful return of fetch looks like {'resume_body':'body of resume'}
   */
   getCurrentResumeFromServer() {
-    fetch('http://192.168.1.73:8000/currentresume/')
+    fetch(getResumeEndPt)
     .then((response) => {return response.json()})
     .then((responseJson) => {
       console.log('getCurrentResumeFromServer responseJson ' + JSON.stringify(responseJson));
