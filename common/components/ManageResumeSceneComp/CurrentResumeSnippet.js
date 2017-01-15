@@ -25,6 +25,10 @@ class CurrentResumeSnippet extends Component {
       }
     })
     .catch((error) => {
+      // backend not reachable or device offline
+      // could show better error message
+      // could also monitor connectivty and refresh once connection available
+      this.props.onCurrResumeChanged(strings.netFailure);
       console.log('getCurrentResumeFromServer fetching error' + error);
     })
   }
@@ -39,7 +43,9 @@ class CurrentResumeSnippet extends Component {
     }
     return(
       <Text style={styles.resumeSnippet}>
-        {this.props.currResume ? (this.props.currResume.substring(0,20) + '...') : strings.noCurrentResume}
+        {
+          this.props.currResume ? (this.props.currResume.substring(0,20) + '...') : strings.noCurrentResume
+        }
       </Text>
     );
   }

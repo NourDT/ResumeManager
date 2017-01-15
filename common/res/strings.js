@@ -12,7 +12,8 @@ let strings = new LocalizedStrings({
     createNewResume: "Create a new resume",
     comingSoon: "Coming Soon",
     savePasteResume: "Save",
-    pasteResumePlaceholder: "Paste in your resume here..."
+    pasteResumePlaceholder: "Paste in your resume here...",
+    netFailure: 'Network request failed. Please check internet or try again later. Sorry!'
   },
   it:{
     currentResume: "Current Resume + Pizza",
