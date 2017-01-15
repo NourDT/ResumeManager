@@ -5,13 +5,17 @@ const padding = {
   mediumPadding: 10
 }
 
+const color = {
+  colorBlue: '#21A9DC'
+}
+
 export default StyleSheet.create({
   sceneBase: {
     padding: padding.smallPadding
   },
   textButtonBlue: {
     color: 'white',
-    backgroundColor: '#21A9DC',
+    backgroundColor: color.colorBlue,
     fontSize: 20,
     height: 40,
     textAlign: 'center',
@@ -20,8 +24,10 @@ export default StyleSheet.create({
   saveButton: {
     alignItems: 'center',
     fontSize: 20,
-    margin: 14,
-    color: '#21A9DC',
+    margin: 14, // have to check on different screens
+    // could depend on APPBAR_HEIGHT in
+    // react-native/Libraries/CustomComponents/NavigationExperimental/NavigationHeader.js
+    color: color.colorBlue,
   },
   cardBase: {
     backgroundColor: 'white',

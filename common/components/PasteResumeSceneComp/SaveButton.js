@@ -43,7 +43,6 @@ class SaveButton extends Component {
   }
 
   render() {
-    console.log('SaveButton render');
     return(
       <Text 
         style={[styles.saveButton, this.disabledButStyle()]}
