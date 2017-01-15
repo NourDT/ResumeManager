@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import { connect } from 'react-redux';
 
 import strings from '../../res/strings';
 import styles from '../styles/allStyles';
 import { SimpleCard, Hr } from '../CommonComp';
+import { push } from '../../actions/navActions';
 
-export default class NewResumeCard extends Component {
+class NewResumeCard extends Component {
   renderBody() {
-    // todo import images into objects at a common place
-    // var imgSrcDir='../../res/img/';
     return (
       <View>
         <Hr/>
@@ -63,3 +63,19 @@ class NewResumeItem extends Component {
     );
   }
 }
+
+function mapStateToProps (state) {
+  return {
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    push: (route) => dispatch(push(route))
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NewResumeCard);

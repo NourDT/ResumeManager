@@ -31,5 +31,13 @@ export default StyleSheet.create({
     backgroundColor: '#b3b3b3',
     marginTop: padding.mediumPadding,
     marginBottom: padding.mediumPadding
+  },
+  pasteResumeTextInput: {
+    backgroundColor: 'white',
+    textAlign: 'left',
+    textAlignVertical: 'top'
+  },
+  resumeSnippet: {
+    marginBottom: padding.smallPadding
   }
 });
