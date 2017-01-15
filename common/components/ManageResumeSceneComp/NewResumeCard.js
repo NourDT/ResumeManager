@@ -46,6 +46,11 @@ class NewResumeCard extends Component {
   }
 }
 
+NewResumeCard.propTypes = {
+  push: React.PropTypes.func
+}
+
+/** Simple stateless component to render a item for new resume which looks like: Img- Text - Right Arror*/
 class NewResumeItem extends Component {
   render() {
     return (

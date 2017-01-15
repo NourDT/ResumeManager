@@ -38,7 +38,7 @@ class SaveButton extends Component {
   }
 
   isNotTextEmpty() {
-    return this.props.pasteResumeText.text && this.props.pasteResumeText.text.length > 0;
+    return this.props.pasteResumeText && this.props.pasteResumeText.length > 0;
   }
 
   disabledButStyle() {
@@ -46,7 +46,7 @@ class SaveButton extends Component {
   }
 
   disabledButOnPress() {
-    return this.isNotTextEmpty() ? () => this.postResume(this.props.pasteResumeText.text) : () => {};
+    return this.isNotTextEmpty() ? () => this.postResume(this.props.pasteResumeText) : () => {};
   }
 
   render() {
@@ -61,9 +61,14 @@ class SaveButton extends Component {
   }
 }
 
+SaveButton.propTypes = {
+  pasteResumeText: React.PropTypes.string,
+  onCurrResumeChanged: React.PropTypes.func
+}
+
 function mapStateToProps (state) {
   return {
-    pasteResumeText: state.otherReducer.pasteResumeText,
+    pasteResumeText: state.otherReducer.pasteResumeText.text,
   };
 }
 

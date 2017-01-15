@@ -25,6 +25,11 @@ class ViewResumeButton extends Component {
   }
 }
 
+ViewResumeButton.propTypes = {
+  currResume: React.PropTypes.string,
+  push: React.PropTypes.func
+}
+
 function mapStateToProps (state) {
   return {
     currResume: state.otherReducer.currResume

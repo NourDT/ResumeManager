@@ -59,6 +59,11 @@ class CurrentResumeSnippet extends Component {
   }
 }
 
+CurrentResumeSnippet.propTypes = {
+  currResume: React.PropTypes.string,
+  onCurrResumeChanged: React.PropTypes.func
+}
+
 function mapStateToProps (state) {
   return {
     currResume: state.otherReducer.currResume

@@ -34,6 +34,10 @@ class PasteResumeScene extends Component {
   }
 }
 
+PasteResumeScene.propTypes = {
+  pasteResumeChanged: React.PropTypes.func
+}
+
 function mapStateToProps (state) {
   return {
   };

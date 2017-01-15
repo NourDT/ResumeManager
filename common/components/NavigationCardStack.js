@@ -79,4 +79,10 @@ class NavigationCardStackBase extends Component {
   }
 }
 
+NavigationCardStackBase.propTypes = {
+  navState: React.PropTypes.object,
+  pop: React.PropTypes.func,
+  push: React.PropTypes.func  
+}
+
 export default NavigationCardStackBase;

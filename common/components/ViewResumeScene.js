@@ -24,6 +24,10 @@ class ViewResumeScene extends Component {
   }
 }
 
+ViewResumeScene.propTypes = {
+  currResume: React.PropTypes.string
+}
+
 function mapStateToProps (state) {
   return {
     currResume: state.otherReducer.currResume
