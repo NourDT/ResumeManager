@@ -42,10 +42,13 @@ class CurrentResumeSnippet extends Component {
     return !this.props.currResume || this.props.currResume.length == 0;
   }
 
-  render() {
+  componentDidMount() {
     if (this.isEmptyCurrResume()) {
       this.getCurrentResume();
     }
+  }
+
+  render() {
     return(
       <Text style={styles.resumeSnippet}>
         {
