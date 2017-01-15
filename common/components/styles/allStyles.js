@@ -25,9 +25,6 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold'
   },
-  cardBody: {
-    
-  },
   hrLine: {
     flex: 1,
     height: 1,

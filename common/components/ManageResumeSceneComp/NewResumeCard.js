@@ -16,7 +16,7 @@ export default class NewResumeCard extends Component {
           imgsrc={require('../../res/img/addFromComp.png')}
           itemText={strings.addFromComp}
           onPressAction={
-            () => this.props.push({ key: 'ComingSoonScene', title: strings.comingSoon })
+            () => this.props.push({ key: 'ComingSoonScene', title: strings.addFromComp })
           }
         />
         <Hr/>
@@ -32,7 +32,7 @@ export default class NewResumeCard extends Component {
           imgsrc={require('../../res/img/createNewResume.png')}
           itemText={strings.createNewResume}
           onPressAction={
-            () => this.props.push({ key: 'ComingSoonScene', title: strings.comingSoon })
+            () => this.props.push({ key: 'ComingSoonScene', title: strings.createNewResume })
           }
         />
       </View>

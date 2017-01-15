@@ -11,8 +11,8 @@ const navReducer = (state, action) => {
     return {
       index: 0,
       routes: [
-        // { key : 'ManageResumeScene', title: strings.manageResumeTitle },
-        { key : 'PasteResumeScene', title: strings.pasteResume }
+        { key : 'ManageResumeScene', title: strings.manageResumeTitle },
+        // { key : 'PasteResumeScene', title: strings.pasteResume }
       ]
     }
   }

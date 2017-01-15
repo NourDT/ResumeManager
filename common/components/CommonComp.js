@@ -32,16 +32,16 @@ export class Hr extends Component {
 }
 
 export class SimpleCard extends Component {
-  renderTitle() {
+  renderTitle = () => {
     return (
       <Text style={styles.cardTitle}>
         {this.props.title}
       </Text>
     );
   }
-  renderBody() {
+  renderBody = () => {
     return (
-      <View style={styles.cardBody}>
+      <View>
         {this.props.cardBody}
       </View>
     );

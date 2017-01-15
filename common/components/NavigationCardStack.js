@@ -38,13 +38,13 @@ class NavigationCardStackBase extends Component {
   _renderScene = (props) => {
     switch(props.scene.route.key) {
       case 'ManageResumeScene':
-        return <ManageResumeScene {...this.props}/>; // only pass push and pop??
+        return <ManageResumeScene/>;
       case 'ViewResumeScene':
-        return <ViewResumeScene {...this.props}/>;
+        return <ViewResumeScene/>;
       case 'PasteResumeScene':
-        return <PasteResumeScene {...this.props}/>;
+        return <PasteResumeScene/>;
       case 'ComingSoonScene':
-        return <ComingSoonScene {...this.props}/>;
+        return <ComingSoonScene/>;
     }
   }
   _renderHeader = (sceneProps) => {
@@ -56,7 +56,7 @@ class NavigationCardStackBase extends Component {
     );
   }
   render() {
-    console.log('NavigationCardStackBase render ' + JSON.stringify(this.props));
+    console.log('NavigationCardStackBase render'); // + JSON.stringify(this.props)
     return (
       <NavigationCardStack
         renderHeader={this._renderHeader}

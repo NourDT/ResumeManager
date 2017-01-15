@@ -20,7 +20,12 @@ let strings = new LocalizedStrings({
     manageResumeTitle: "Manage Resume Pizza",
     noCurrentResume: "No resume uploaded! Go get pizza.",
     newResumeTitle: "New Pizza?",
-    comingSoon: "Coming Soon fresh pizza"
+    addFromComp: "Add from computer + Pizza",
+    pasteResume: "Paste Resume + Pizza",
+    createNewResume: "Create a new resume + Pizza",
+    comingSoon: "Coming Soon + Pizza",
+    savePasteResume: "Save + Pizza",
+    pasteResumePlaceholder: "Paste in your resume here... + Pizza"
   }
 });
 
