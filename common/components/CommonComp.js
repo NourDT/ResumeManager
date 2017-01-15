@@ -29,6 +29,12 @@ export class BlueButton extends Component {
   }
 }
 
+BlueButton.propTypes = {
+  isEnabled: React.PropTypes.bool,
+  onPressAction: React.PropTypes.func,
+  buttonText: React.PropTypes.string
+}
+
 /**
 * Simple horizontal line or could use other npm packages like react-native-hr
 */
@@ -66,4 +72,9 @@ export class SimpleCard extends Component {
       </View>
     );
   }
+}
+
+SimpleCard.propTypes = {
+  cardBody: React.PropTypes.object,
+  title: React.PropTypes.string
 }

@@ -69,6 +69,12 @@ class NewResumeItem extends Component {
   }
 }
 
+NewResumeItem.propTypes = {
+  imgsrc: React.PropTypes.number,
+  itemText: React.PropTypes.string,
+  onPressAction: React.PropTypes.func
+}
+
 function mapStateToProps (state) {
   return {
   };

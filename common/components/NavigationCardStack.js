@@ -47,6 +47,11 @@ class Header extends Component {
   }
 }
 
+Header.propTypes = {
+  pop: React.PropTypes.func,
+  scene: React.PropTypes.object,
+}
+
 class NavigationCardStackBase extends Component {
   _renderScene = (props) => {
     switch(props.scene.route.key) {
@@ -80,9 +85,9 @@ class NavigationCardStackBase extends Component {
 }
 
 NavigationCardStackBase.propTypes = {
-  navState: React.PropTypes.object,
+  navState: React.PropTypes.object, // could check further
   pop: React.PropTypes.func,
-  push: React.PropTypes.func  
+  push: React.PropTypes.func
 }
 
 export default NavigationCardStackBase;

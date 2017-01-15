@@ -11,7 +11,11 @@ import { push } from '../../actions/navActions';
 */
 class ViewResumeButton extends Component {
   isNotEmptyCurrResume() {
-    return this.props.currResume && this.props.currResume.length > 0;
+    if (this.props.currResume != null && this.props.currResume.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   render() {
