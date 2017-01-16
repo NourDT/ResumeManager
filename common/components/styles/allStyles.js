@@ -51,7 +51,8 @@ export default StyleSheet.create({
   pasteResumeTextInput: {
     backgroundColor: 'white',
     textAlign: 'left',
-    textAlignVertical: 'top'
+    textAlignVertical: 'top',
+    height: 200
   },
   resumeSnippet: {
     marginBottom: padding.smallPadding

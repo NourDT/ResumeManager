@@ -21,6 +21,7 @@ class CurrentResumeSnippet extends Component {
   * Successful return of fetch looks like {'resume_body':'body of resume'}
   */
   getCurrentResumeFromServer() {
+    console.log('fetching...' + getResumeEndPt);
     fetch(getResumeEndPt)
     .then((response) => {return response.json()})
     .then((responseJson) => {

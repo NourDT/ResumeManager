@@ -15,10 +15,10 @@ class PasteResumeScene extends Component {
     this.props.pasteResumeChanged('');
     return (
       <TextInput
+        placeholder="Type here to translate!"
         style={styles.pasteResumeTextInput}
         editable={true}
         multiline={true}
-        numberOfLines={20}
         onChangeText={(text) => this.props.pasteResumeChanged({text})}
         placeholder={strings.pasteResumePlaceholder}
       />
