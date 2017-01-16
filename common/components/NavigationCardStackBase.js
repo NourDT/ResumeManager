@@ -1,17 +1,20 @@
 import React, { Component, PropTypes } from 'react';
 import { View, Text, NavigationExperimental } from 'react-native';
+import { connect } from 'react-redux';
 
 import ManageResumeScene from './ManageResumeScene';
 import ViewResumeScene from './ViewResumeScene';
 import ComingSoonScene from './ComingSoonScene';
 import PasteResumeScene from './PasteResumeScene';
 import SaveButton from './PasteResumeSceneComp/SaveButton';
+import { push, pop } from '../actions/navActions';
 
 const {
   CardStack: NavigationCardStack,
   Header: NavigationHeader,
 } = NavigationExperimental;
 
+/** Header nav bar */
 class Header extends Component {
   render() {
     return (
@@ -52,6 +55,7 @@ Header.propTypes = {
   scene: React.PropTypes.object,
 }
 
+/** Component to render each scene based on store state */
 class NavigationCardStackBase extends Component {
   _renderScene = (props) => {
     switch(props.scene.route.key) {
@@ -90,4 +94,20 @@ NavigationCardStackBase.propTypes = {
   push: React.PropTypes.func
 }
 
-export default NavigationCardStackBase;
+function mapStateToProps (state) {
+  return {
+    navState: state.navState,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    push: (route) => dispatch(push(route)),
+    pop: () => dispatch(pop()),
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavigationCardStackBase);
