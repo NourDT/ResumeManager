@@ -15,7 +15,6 @@ class PasteResumeScene extends Component {
     this.props.pasteResumeChanged('');
     return (
       <TextInput
-        placeholder="Type here to translate!"
         style={styles.pasteResumeTextInput}
         editable={true}
         multiline={true}
