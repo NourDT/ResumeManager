@@ -7,6 +7,10 @@ import styles from '../styles/allStyles';
 import { SimpleCard, Hr } from '../CommonComp';
 import { push } from '../../actions/navActions';
 
+/**
+* New resume component used in Manage Resume scene.
+* Uses SimpleCard, with 3 NewResumeItem component in body
+*/
 class NewResumeCard extends Component {
   renderBody() {
     return (

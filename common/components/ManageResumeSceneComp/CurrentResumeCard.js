@@ -6,6 +6,11 @@ import CurrentResumeSnippet from './CurrentResumeSnippet';
 import { SimpleCard } from '../CommonComp';
 import strings from '../../res/strings';
 
+/**
+* Current resume component used in Manage Resume scene
+* Shows a snippet of current resume string or no resume or error message in CurrentResumeSnippet
+* ViewResumeButton opens scene with the whole current resume.
+*/
 class CurrentResumeCard extends Component {
   renderCurrentResumeSnippet() {
     return(

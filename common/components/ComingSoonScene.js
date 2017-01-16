@@ -5,6 +5,7 @@ import styles from './styles/allStyles';
 import strings from '../res/strings';
 import { SimpleCard } from './CommonComp';
 
+/** Component to just show coming soon text for other new resume options */
 export default class ComingSoonScene extends Component {
   renderBody() {
     return (

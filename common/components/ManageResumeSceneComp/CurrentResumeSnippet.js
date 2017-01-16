@@ -49,11 +49,14 @@ class CurrentResumeSnippet extends Component {
     }
   }
 
+  /**
+  * Render a substring of current resume string
+  */
   render() {
     return(
       <Text style={styles.resumeSnippet}>
         {
-          this.props.currResume ? (this.props.currResume.substring(0,20) + '...') : strings.noCurrentResume
+          (!this.isEmptyCurrResume()) ? (this.props.currResume.substring(0,20) + '...') : strings.noCurrentResume
         }
       </Text>
     );
