@@ -1,7 +1,5 @@
-import LocalizedStrings from 'react-native-localization';
 
-let strings = new LocalizedStrings({
-  "en-US":{
+let strings = {
     currentResume: "Current Resume",
     viewResume: "View",
     manageResumeTitle: "Manage Resume",
@@ -14,20 +12,6 @@ let strings = new LocalizedStrings({
     savePasteResume: "Save",
     pasteResumePlaceholder: "Paste in your resume here...",
     netFailure: 'Network request failed. Please check internet or try again later. Sorry!'
-  },
-  it:{
-    currentResume: "Current Resume + Pizza",
-    viewResume: "View Resume + Pizza",
-    manageResumeTitle: "Manage Resume Pizza",
-    noCurrentResume: "No resume uploaded! Go get pizza.",
-    newResumeTitle: "New Pizza?",
-    addFromComp: "Add from computer + Pizza",
-    pasteResume: "Paste Resume + Pizza",
-    createNewResume: "Create a new resume + Pizza",
-    comingSoon: "Coming Soon + Pizza",
-    savePasteResume: "Save + Pizza",
-    pasteResumePlaceholder: "Paste in your resume here... + Pizza"
-  }
-});
+  };
 
 export default strings;
